@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin+Dark:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
 
-.upper-navbar{
+.upper-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -17,60 +17,148 @@
     color: #fff;
 }
 
-.upper-left span{
+.upper-left span {
     margin: 0 1rem;
 }
-.upper-right a{
+
+.upper-right a {
     text-decoration: none;
     color: #fff;
     display: inline-block;
     margin: 0 1rem;
 }
 
-.middle-navbar{
+.middle-navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:0 2rem;
+    padding: .5rem 2rem;
 }
-.middle-left img{
-width: 180px;
+
+.middle-left img {
+    width: 180px;
 }
 
 .middle-right li {
-display: inline-flex;
-align-items: center;
-justify-content: center;
-list-style-type: disc;
-margin: 0.5rem;
-font-size: 14px;
-}
-.middle-right li img{
-width: 40px;
-margin-right: .3rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: disc;
+    margin: 0.5rem;
+    font-size: 14px;
 }
 
-.lower-navbar{
-display: flex;
-justify-content: space-between;
-align-items: center;
-background-color: #0d263e;
-color: #fff;
-padding: .5rem 1rem;
+.middle-right li img {
+    width: 40px;
+    margin-right: .3rem;
 }
 
-.lower-left li{
-display: inline-block;
-margin: 0 1rem;
+.lower-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0d263e;
+    color: #fff;
+    padding: 0 1rem;
 }
 
-.lower-right button{
-height: 5vh;
-background-color: #a62424;
-color: #fff;
-outline: none;
-border: none;
-padding: 0 1rem;
-cursor: pointer;
+.lower-left li {
+    display: inline-block;
+    /* margin: 0 1rem; */
+    padding: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
 }
 
+.lower-left li:hover {
+    background-color: #a62424;
+}
+
+.lower-right button {
+    text-transform: uppercase;
+    height: 5vh;
+    background-color: #a62424;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.lower-right button::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 0;
+    background-color: #a43f3f;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s ease;
+    opacity: .5;
+}
+
+.lower-right button:hover::after {
+    width: 100%;
+}
+
+
+/* #####################  */
+.home-banner {
+    background: url('https://www.tech2globe.com/images/new-page-images/banner/site-banner.webp');
+
+    background-repeat: no-repeat;
+    height: 80vh;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(22, 30, 69, 0.50);
+    border-bottom-right-radius: 400px;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.home-banner-text {
+    margin-left: 8rem;
+    margin-top: 3rem;
+    color: #fff;
+}
+
+.home-banner-text h1 {
+    font-size: 2.5rem;
+
+}
+
+.home-banner-text button {
+    padding: .8rem 2rem;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all .5s ease;
+    position: relative;
+    
+}
+
+.home-banner-text button::after{
+    content: '';
+    height: 100%;
+    background-color: #a62424;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .5;
+    width: 0;
+    transition: all .5s ease;
+}
+
+.home-banner-text button:hover::after{
+    width: 100%;
+}
